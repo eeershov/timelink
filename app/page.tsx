@@ -1,11 +1,11 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 
 export default function Home() {
   return (
     <main className="bg-[#AEDADA] flex min-h-screen flex-col items-center justify-center p-24 gap-5">
       <div className='bg-white rounded-3xl max-w-screen-2xl min-w-full h-auto flex justify-center items-center'>
         <div className='my-28'>
-          <h1 className='font-normal text-9xl text-center'>LinkTimeZone</h1>
+          <h1 className='font-normal text-9xl text-center text-[#5AB9B9]'>LinkTimeZone</h1>
           <p className='text-2xl text-center'>Сервис позволяет делиться ссылкой на время с учетом каждого часового пояса</p>
         </div>
       </div>
@@ -22,11 +22,15 @@ export default function Home() {
         </div>
 
         <div className='flex flex-col gap-5 w-full'>
-        <div className='bg-white rounded-3xl py-8 px-10 flex gap-5 h-full'>
-          <p className='text-2xl'>Время</p>
-          <input></input>
-          <p className='text-2xl'>Дата</p>
-          <input></input>
+        <div className='bg-white rounded-3xl py-8 px-10 flex gap-5 h-full justify-between'>
+          <div className="w-full">
+            <p className='text-2xl'>Время</p>  
+            <input placeholder="12:34:56" className='bg-white p-4 ring-black ring-1 rounded-3xl w-full text-6xl  h-16`'></input>
+          </div>
+          <div className="w-full">
+            <p className='text-2xl'>Дата</p>
+            <input placeholder="25 . 01 . 2024" className='bg-white p-4 ring-black ring-1 rounded-3xl w-full text-6xl  h-16`'></input>
+          </div>
         </div>
 
         <div>
