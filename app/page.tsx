@@ -23,13 +23,17 @@ export default function Home() {
 
         <div className='flex flex-col gap-5 w-full'>
         <div className='bg-white rounded-3xl py-8 px-10 flex gap-5 h-full justify-between'>
-          <div className="w-full">
-            <p className='text-2xl'>Время</p>  
-            <input placeholder="12:34:56" className='bg-white p-4 ring-black ring-1 rounded-3xl w-full text-6xl  h-16`'></input>
+          <div className='w-full'>
+            <p className='text-2xl pb-5'>Время</p>
+            <input placeholder="12:34:56" 
+            type='time'
+            className='bg-white p-4 ring-black ring-1 rounded-3xl w-full text-6xl  h-16`'></input>
           </div>
-          <div className="w-full">
-            <p className='text-2xl'>Дата</p>
-            <input placeholder="25 . 01 . 2024" className='bg-white p-4 ring-black ring-1 rounded-3xl w-full text-6xl  h-16`'></input>
+          <div className='w-full'>
+            <p className='text-2xl pb-5'>Дата</p>
+            <input placeholder="25 . 01 . 2024" 
+            type='date'
+            className='bg-white p-4 ring-black ring-1 rounded-3xl w-full text-6xl  h-16`'></input>
           </div>
         </div>
 
