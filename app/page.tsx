@@ -2,43 +2,54 @@
 
 export default function Home() {
   return (
-    <main className="bg-[#AEDADA] flex min-h-screen flex-col items-center justify-center 2xl:p-24 2xl:gap-5 gap-3">
-      <div className='bg-white rounded-2xl 2xl:rounded-3xl max-w-screen-2xl min-w-full h-auto flex justify-center items-center'>
-        <div className='2xl:my-28 w-min'>
-          <h1 className='font-normal text-8xl 2xl:text-9xl text-center text-[#5AB9B9]'>LinkTimeZone</h1>
-          <p className='text-wrap text-lg 2xl:text-2xl text-center'>Сервис позволяет делиться ссылкой на время с учетом каждого часового пояса</p>
+    <main className='flex min-h-screen flex-col items-center justify-center gap-3 bg-[#AEDADA] 2xl:gap-5 2xl:p-24'>
+      <div className='flex h-auto min-w-full max-w-screen-2xl items-center justify-center rounded-2xl bg-white 2xl:rounded-3xl'>
+        <div className='w-min 2xl:my-28'>
+          <h1 className='text-center text-8xl font-normal text-[#5AB9B9] 2xl:text-9xl'>
+            LinkTimeZone
+          </h1>
+          <p className='text-wrap text-center text-lg 2xl:text-2xl'>
+            Сервис позволяет делиться ссылкой на время с учетом каждого часового
+            пояса
+          </p>
         </div>
       </div>
 
-      <div className='bottom__block flex gap-3 2xl:gap-5 w-full min-h-72'>
-        <div className='bg-white rounded-2xl 2xl:rounded-3xl py-8 px-10 w-1/4 flex flex-col'>
-          <p className='text-2xl flex justify-between'>
+      <div className='bottom__block flex min-h-72 w-full gap-3 2xl:gap-5'>
+        <div className='flex w-1/4 flex-col rounded-2xl bg-white px-10 py-8 2xl:rounded-3xl'>
+          <p className='flex justify-between text-2xl'>
             Ваше время
             <span className='text-2xl'>⚙️</span>
           </p>
-          <div className='h-full flex items-center justify-center'>
+          <div className='flex h-full items-center justify-center'>
             <p className='text-9xl'>19:10</p>
           </div>
         </div>
 
-        <div className='flex flex-col gap-3 2xl:gap-5 w-full'>
-          <div className='bg-white rounded-2xl 2xl:rounded-3xl py-8 px-10 flex gap-3 2xl:gap-5 h-full justify-between'>
+        <div className='flex w-full flex-col gap-3 2xl:gap-5'>
+          <div className='flex h-full justify-between gap-3 rounded-2xl bg-white px-10 py-8 2xl:gap-5 2xl:rounded-3xl'>
             <div className='w-full'>
-              <p className='text-2xl pb-5'>Время</p>
-              <input placeholder="12:34:56"
+              <p className='pb-5 text-2xl'>Время</p>
+              <input
+                placeholder='12:34:56'
                 type='time'
-                className='bg-white p-4 ring-black ring-1 rounded-2xl 2xl:rounded-3xl w-full text-6xl  h-16`'></input>
+                className='h-16` w-full rounded-2xl bg-white p-4 text-6xl ring-1 ring-black  2xl:rounded-3xl'
+              ></input>
             </div>
             <div className='w-full'>
-              <p className='text-2xl pb-5'>Дата</p>
-              <input placeholder="25 . 01 . 2024"
+              <p className='pb-5 text-2xl'>Дата</p>
+              <input
+                placeholder='25 . 01 . 2024'
                 type='date'
-                className='bg-white p-4 ring-black ring-1 rounded-2xl 2xl:rounded-3xl w-full text-6xl  h-16`'></input>
+                className='h-16 w-full rounded-2xl bg-white p-4 text-6xl ring-1 ring-black  2xl:rounded-3xl'
+              ></input>
             </div>
           </div>
 
           <div>
-            <button className='bg-[#006666] rounded-2xl 2xl:rounded-3xl h-auto w-full text-2xl uppercase text-white hover:bg-[#5AB9B9] py-8'>Сгенерировать ссылку</button>
+            <button className='h-auto w-full rounded-2xl bg-[#006666] py-8 text-2xl uppercase text-white  hover:bg-[#5AB9B9] 2xl:rounded-3xl'>
+              Сгенерировать ссылку
+            </button>
           </div>
         </div>
       </div>
