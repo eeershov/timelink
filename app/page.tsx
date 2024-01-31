@@ -1,4 +1,6 @@
 import { Urbanist } from 'next/font/google'
+import UserTime from './ui/userTime'
+import { Suspense } from 'react'
 
 const urbanist = Urbanist({ subsets: ['latin'] })
 
@@ -33,16 +35,7 @@ export default function Home() {
       </div>
 
       <div className='bottom__block flex min-h-72 w-full flex-wrap gap-3 md:flex-nowrap 2xl:gap-5'>
-        <div className='flex grow flex-col rounded-2xl bg-white px-10 py-8 md:grow-0 2xl:rounded-3xl'>
-          <p className='flex justify-between text-2xl'>
-            Ваше время
-            <span className='text-2xl'>⚙️</span>
-          </p>
-          <div className='flex h-full items-center justify-center'>
-            <p className='text-8xl 2xl:text-9xl'>19:10</p>
-          </div>
-        </div>
-
+        <UserTime />
         <div className='flex grow flex-col gap-3 2xl:gap-5'>
           <div className='flex h-full flex-wrap justify-between gap-3 rounded-2xl bg-white px-10 py-8 md:flex-nowrap 2xl:gap-5 2xl:rounded-3xl'>
             {timeAndDate.map((item) => {
