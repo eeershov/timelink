@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { Urbanist } from 'next/font/google'
 import './globals.css'
+import { Comfortaa } from 'next/font/google'
 
-const urbanist = Urbanist({ subsets: ['latin'] })
+const comfortaa = Comfortaa({ subsets: ['cyrillic', 'latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={urbanist.className}>{children}</body>
+      <body className={comfortaa.className}>{children}</body>
     </html>
   )
 }
