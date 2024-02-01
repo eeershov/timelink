@@ -16,7 +16,7 @@ const UserTime = () => {
     <div className='flex grow flex-col rounded-2xl bg-white px-10 py-8 md:grow-0 2xl:rounded-3xl'>
       <p className='flex justify-between text-2xl'>
         Ваше время
-        <span className='text-2xl'>⚙️</span>
+        {/* <span className='text-2xl'>⚙️</span> */}
       </p>
       <div className='flex h-full items-center justify-center'>
         <p className='font-mono text-8xl 2xl:text-9xl'>
