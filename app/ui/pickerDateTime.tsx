@@ -1,12 +1,11 @@
 'use client'
 
-import { useSearchParams, usePathname, useRouter } from 'next/navigation'
+import { useSearchParams, useRouter } from 'next/navigation'
 import { useState } from 'react'
 
 export default function PickerDateTime() {
   const searchParams = useSearchParams()
-  const pathname = usePathname()
-  const { replace } = useRouter()
+  const router = useRouter()
 
   const [timeInput, setTimeInput] = useState('')
   const [dateInput, setDateInput] = useState('')
@@ -19,7 +18,7 @@ export default function PickerDateTime() {
     } else {
       params.delete('t')
     }
-    replace(`${pathname}?${params.toString()}`)
+    router.push(`/share?${params.toString()}`)
   }
 
   const timeAndDate = [
