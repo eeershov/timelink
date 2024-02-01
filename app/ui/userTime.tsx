@@ -19,7 +19,7 @@ const UserTime = () => {
         {/* <span className='text-2xl'>⚙️</span> */}
       </p>
       <div className='flex h-full items-center justify-center'>
-        <p className='font-mono text-8xl 2xl:text-9xl'>
+        <p className='font-mono text-7xl sm:text-8xl 2xl:text-9xl'>
           {time.toLocaleTimeString('ru-RU', {
             hour: '2-digit',
             minute: '2-digit',
