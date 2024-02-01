@@ -13,12 +13,15 @@ export default function PickerDateTime() {
   const handleClick = () => {
     const params = new URLSearchParams(searchParams)
     const time = new Date(dateInput + ' ' + timeInput).getTime() / 1000
-    if (time) {
+
+    if (time && dateInput.length > 0 && timeInput.length > 0) {
+      console.log('setting time', time)
       params.set('t', time.toString())
+      router.push(`/share?${params.toString()}`)
     } else {
+      console.log('deleting', time)
       params.delete('t')
     }
-    router.push(`/share?${params.toString()}`)
   }
 
   const timeAndDate = [
@@ -52,6 +55,7 @@ export default function PickerDateTime() {
       <div>
         <button
           onClick={handleClick}
+          type='button'
           className='h-auto w-full rounded-2xl bg-[#006666] py-8 text-2xl uppercase text-white  hover:bg-[#5AB9B9] 2xl:rounded-3xl'
         >
           Сгенерировать ссылку
