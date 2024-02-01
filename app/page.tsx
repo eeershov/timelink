@@ -1,23 +1,11 @@
 import { Urbanist } from 'next/font/google'
 import UserTime from './ui/userTime'
 import { Suspense } from 'react'
+import PickerDateTime from './ui/pickerDateTime'
 
 const urbanist = Urbanist({ subsets: ['latin'] })
 
 export default function Home() {
-  const timeAndDate = [
-    {
-      name: 'Время',
-      placeholder: '12:34:56',
-      type: 'time',
-    },
-    {
-      name: 'Дата',
-      placeholder: '25 . 01 . 2024',
-      type: 'date',
-    },
-  ]
-
   return (
     <main className='m-auto flex min-h-screen w-full max-w-screen-2xl flex-col items-center justify-center gap-3 px-2 py-2 md:py-0 xl:px-12 2xl:gap-5 2xl:px-24'>
       <div className='flex h-auto min-w-full items-center justify-center rounded-2xl bg-white 2xl:rounded-3xl'>
@@ -36,27 +24,7 @@ export default function Home() {
 
       <div className='bottom__block flex min-h-72 w-full flex-wrap gap-3 md:flex-nowrap 2xl:gap-5'>
         <UserTime />
-        <div className='flex grow flex-col gap-3 2xl:gap-5'>
-          <div className='flex h-full flex-wrap justify-between gap-3 rounded-2xl bg-white px-10 py-8 md:flex-nowrap 2xl:gap-5 2xl:rounded-3xl'>
-            {timeAndDate.map((item) => {
-              return (
-                <div key={item.name} className='w-full'>
-                  <p className='pb-5 text-2xl'>{item.name}</p>
-                  <input
-                    placeholder={item.placeholder}
-                    type={item.type}
-                    className='h-16 w-full rounded-2xl bg-white p-4 text-lg ring-1 ring-[#666666] hover:ring-2 hover:ring-[#5AB9B9]  focus:outline-[#006666] 2xl:rounded-3xl 2xl:text-2xl'
-                  ></input>
-                </div>
-              )
-            })}
-          </div>
-          <div>
-            <button className='h-auto w-full rounded-2xl bg-[#006666] py-8 text-2xl uppercase text-white  hover:bg-[#5AB9B9] 2xl:rounded-3xl'>
-              Сгенерировать ссылку
-            </button>
-          </div>
-        </div>
+        <PickerDateTime />
       </div>
     </main>
   )
