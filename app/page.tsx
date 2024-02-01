@@ -2,7 +2,6 @@ import { Urbanist } from 'next/font/google'
 import UserTime from './ui/userTime'
 import { Suspense } from 'react'
 import PickerDateTime from './ui/pickerDateTime'
-import { GetTimeFromLink } from './ui/getTimeFromLink'
 
 const urbanist = Urbanist({ subsets: ['latin'] })
 
@@ -16,9 +15,6 @@ export default function Home() {
           >
             LinkTimeZone
           </h1>
-          <Suspense fallback={<p>LinkTimeZone</p>}>
-            <GetTimeFromLink />
-          </Suspense>
           <p className='text-wrap text-center text-lg 2xl:text-2xl'>
             Сервис позволяет делиться ссылкой на время с учетом каждого часового
             пояса
