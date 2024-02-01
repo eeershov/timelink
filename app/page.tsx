@@ -24,7 +24,9 @@ export default function Home() {
 
       <div className='bottom__block flex min-h-72 w-full flex-wrap gap-3 md:flex-nowrap 2xl:gap-5'>
         <UserTime />
-        <PickerDateTime />
+        <Suspense fallback={<div>Please pick a date and time</div>}>
+          <PickerDateTime />
+        </Suspense>
       </div>
     </main>
   )
