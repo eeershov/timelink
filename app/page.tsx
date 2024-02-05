@@ -19,6 +19,9 @@ export default function Home() {
             Сервис позволяет делиться ссылкой на время с учетом каждого часового
             пояса
           </p>
+          <span className='absolute right-10 top-7 text-center text-base font-black uppercase text-slate-700 opacity-70'>
+            beta!
+          </span>
         </div>
       </div>
 
